@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<suite name = "Simple HTML-XML Suite">
+   <test name = "Simple HTML-XML test">
+      <classes>
+         <class name = "demo.New" />
+         <class name = "demo.Test1" />
+      </classes>
+   </test>
+</suite>

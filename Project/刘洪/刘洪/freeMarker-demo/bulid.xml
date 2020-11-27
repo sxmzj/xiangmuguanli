@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="demo" basedir=".">
+    <property name="lib.dir" value="lib"/>
+    <path id="test1.classpath">
+        <!-- adding the saxon jar to your classpath -->
+      <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+ 
+    <target name="transform">
+        <property name="dir" value=""/>
+ 
+        <!-- <mkdir dir="F:/JAVA/workspace/freeMarker-demo/test-output/"/> -->
+ 
+        <xslt in="F:/JAVA/workspace/freeMarker-demo/test-output/testng-results.xml"
+              style="F:/JAVA/workspace/freeMarker-demo/test-output/testng-results.xsl"
+              out="F:/JAVA/workspace/freeMarker-demo/test-output/index2.html"
+              classpathref="test1.classpath" processor="SaxonLiaison">
+            <param name="testNgXslt.outputDir" expression="F:/JAVA/workspace/freeMarker-demo/test-output" />
+        </xslt>
+    </target>
+</project>
